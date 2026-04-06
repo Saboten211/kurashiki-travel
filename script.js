@@ -1,4 +1,4 @@
-// 倉敷トラベル — Script
+// 倉敷トラベル — Script v2
 
 // Header scroll effect
 const header = document.querySelector('.header');
@@ -12,14 +12,23 @@ const mobileNav = document.querySelector('.mobile-nav');
 const mobileNavClose = document.querySelector('.mobile-nav-close');
 
 if (hamburger) {
-  hamburger.addEventListener('click', () => mobileNav.classList.add('active'));
+  hamburger.addEventListener('click', () => {
+    mobileNav.classList.add('active');
+    hamburger.setAttribute('aria-expanded', 'true');
+  });
 }
 if (mobileNavClose) {
-  mobileNavClose.addEventListener('click', () => mobileNav.classList.remove('active'));
+  mobileNavClose.addEventListener('click', () => {
+    mobileNav.classList.remove('active');
+    hamburger.setAttribute('aria-expanded', 'false');
+  });
 }
 if (mobileNav) {
   mobileNav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => mobileNav.classList.remove('active'));
+    link.addEventListener('click', () => {
+      mobileNav.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
   });
 }
 
@@ -32,7 +41,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.1 }
+  { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
 );
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
@@ -42,7 +51,45 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     e.preventDefault();
     const target = document.querySelector(anchor.getAttribute('href'));
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const headerHeight = document.querySelector('.header').offsetHeight;
+      const top = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+      window.scrollTo({ top, behavior: 'smooth' });
     }
   });
 });
+
+// Hero slideshow
+const heroSlides = document.querySelectorAll('.hero-slide');
+if (heroSlides.length > 1) {
+  let currentSlide = 0;
+  setInterval(() => {
+    heroSlides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % heroSlides.length;
+    heroSlides[currentSlide].classList.add('active');
+  }, 5000);
+}
+
+// Swiper initialization (tours)
+if (typeof Swiper !== 'undefined' && document.querySelector('.tour-swiper')) {
+  new Swiper('.tour-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 24,
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      640: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 },
+    },
+  });
+}

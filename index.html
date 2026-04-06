@@ -1,22 +1,128 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" prefix="og: https://ogp.me/ns#">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>倉敷トラベル — 白壁の町で、暮らしに出会う旅。</title>
-  <meta name="description" content="倉敷美観地区を中心に、地元の人と出会い、体験し、暮らしに触れる旅を提案します。体験ツアー・モデルコース・グルメ情報をお届け。">
+  <meta name="description" content="倉敷美観地区を中心に、地元の職人や店主と出会い、備前焼・藍染め・帆布づくりを体験できる観光サイト。モデルコース・グルメ・アクセス情報も。">
+  <link rel="canonical" href="https://kurashiki-travel.pages.dev/">
+
+  <!-- OGP -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="倉敷トラベル — 白壁の町で、暮らしに出会う旅。">
+  <meta property="og:description" content="倉敷美観地区を中心に、地元の職人と出会い、体験し、暮らしに触れる旅を提案します。">
+  <meta property="og:url" content="https://kurashiki-travel.pages.dev/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1580998691018-928097b4b7c4?w=1200&q=80">
+  <meta property="og:site_name" content="倉敷トラベル">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="倉敷トラベル — 白壁の町で、暮らしに出会う旅。">
+  <meta name="twitter:description" content="倉敷美観地区を中心に、地元の職人と出会い、体験し、暮らしに触れる旅を提案します。">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1580998691018-928097b4b7c4?w=1200&q=80">
+
+  <!-- Fonts & Swiper -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link rel="stylesheet" href="style.css">
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "倉敷トラベル",
+    "url": "https://kurashiki-travel.pages.dev",
+    "description": "倉敷美観地区を中心に、地元の職人や店主と出会い、体験し、暮らしに触れる旅を提案します。",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "倉敷市",
+      "addressRegion": "岡山県",
+      "addressCountry": "JP"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "倉敷市"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: TouristDestination -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristDestination",
+    "name": "倉敷美観地区",
+    "description": "江戸時代の白壁の蔵屋敷と柳並木が残る歴史的町並み。大原美術館、倉敷アイビースクエア、デニムストリートなど見どころ多数。",
+    "touristType": ["文化体験", "ものづくり体験", "まち歩き", "グルメ"],
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 34.5947,
+      "longitude": 133.7714
+    },
+    "containedInPlace": {
+      "@type": "City",
+      "name": "倉敷市",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "岡山県"
+      }
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQ (AIO対策) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "倉敷美観地区でどんな体験ができますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "備前焼の手びねり体験、藍染めハンカチ染色体験、倉敷帆布トートバッグ作り、むらすゞめ手作り体験、美観地区の朝散歩ガイドなど、地元の職人と一緒にものづくりを体験できます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "倉敷へのアクセス方法は？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "新幹線で岡山駅まで（東京から約3時間20分、新大阪から約45分）、岡山駅からJR山陽本線で倉敷駅まで約17分。倉敷駅南口から美観地区まで徒歩約10分です。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "倉敷美観地区の観光に必要な時間は？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "美観地区の散策だけなら2〜3時間、体験ツアーや大原美術館を含めると1日コースがおすすめです。朝の散歩から夕暮れの川舟まで、時間帯ごとに違う表情を楽しめます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "倉敷の名物グルメは？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ままかり寿司（酢漬けの小魚の郷土料理）、白桃パフェ（岡山県産白桃を使用）、むらすゞめ（倉敷銘菓）、デニムソフトクリーム（デニムストリート名物）などが人気です。"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
 <!-- ===== Header ===== -->
-<header class="header">
+<header class="header" role="banner">
   <div class="header-inner">
-    <a href="#" class="logo">倉敷<span>トラベル</span></a>
-    <nav class="nav">
+    <a href="/" class="logo">倉敷<span>トラベル</span></a>
+    <nav class="nav" role="navigation" aria-label="メインナビゲーション">
       <a href="#tours">体験ツアー</a>
       <a href="#people">出会える人</a>
       <a href="#course">モデルコース</a>
@@ -25,14 +131,14 @@
       <a href="#access">アクセス</a>
       <a href="#contact" class="nav-contact">お問い合わせ</a>
     </nav>
-    <button class="hamburger" aria-label="メニューを開く">
+    <button class="hamburger" aria-label="メニューを開く" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
 
 <!-- Mobile Nav -->
-<div class="mobile-nav">
+<div class="mobile-nav" role="dialog" aria-label="モバイルメニュー">
   <button class="mobile-nav-close" aria-label="メニューを閉じる">✕</button>
   <a href="#tours">体験ツアー</a>
   <a href="#people">出会える人</a>
@@ -44,93 +150,127 @@
 </div>
 
 <!-- ===== Hero ===== -->
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-content">
-    <h1 class="hero-tagline">白壁の町で、<br>暮らしに出会う旅。</h1>
-    <p class="hero-sub">Discover the life and craft of Kurashiki</p>
-    <a href="#tours" class="btn btn-primary">体験ツアーを探す</a>
+<section class="hero" aria-label="メインビジュアル">
+  <div class="hero-slides">
+    <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1580998691018-928097b4b7c4?w=1920&q=80')"></div>
+    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=1920&q=80')"></div>
+    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=1920&q=80')"></div>
   </div>
-  <div class="hero-scroll">▼ SCROLL</div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-label">— Kurashiki Travel —</p>
+    <h1 class="hero-tagline">白壁の町で、<br>暮らしに出会う旅。</h1>
+    <p class="hero-sub">地元の職人と出会い、体験し、暮らしに触れる</p>
+    <div class="hero-actions">
+      <a href="#tours" class="btn btn-white">体験ツアーを探す</a>
+      <a href="#course" class="btn btn-ghost">モデルコースを見る</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>SCROLL</span>
+    <div class="hero-scroll-line"></div>
+  </div>
 </section>
 
 <!-- ===== 体験ツアー ===== -->
 <section id="tours" class="section tours">
   <div class="container">
+    <p class="section-label fade-in">EXPERIENCE TOURS</p>
     <h2 class="section-title fade-in">体験ツアー</h2>
-    <p class="section-subtitle fade-in">EXPERIENCE TOURS</p>
-    <div class="tour-grid">
+    <p class="section-lead fade-in">地元の職人と一緒に、ここでしかできない体験を。</p>
 
-      <div class="tour-card fade-in">
-        <div class="tour-card-img" style="background-image:url('https://images.unsplash.com/photo-1565610222536-ef125c59da2e?w=600&q=80')">
-          <span class="tour-card-tag">人気</span>
+    <div class="swiper tour-swiper fade-in">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <article class="tour-card">
+            <div class="tour-card-img" style="background-image:url('https://images.unsplash.com/photo-1565610222536-ef125c59da2e?w=600&q=80')">
+              <span class="tour-card-tag">人気</span>
+            </div>
+            <div class="tour-card-body">
+              <h3 class="tour-card-title">備前焼 手びねり体験</h3>
+              <p class="tour-card-desc">美観地区内の工房で、備前焼の土に触れる。世界にひとつだけの器を自分の手で。</p>
+              <div class="tour-card-meta">
+                <span class="tour-card-price">¥3,800〜</span>
+                <span class="tour-card-duration">約90分</span>
+              </div>
+              <a href="#contact" class="tour-card-btn">予約する →</a>
+            </div>
+          </article>
         </div>
-        <div class="tour-card-body">
-          <h3 class="tour-card-title">備前焼 手びねり体験</h3>
-          <p class="tour-card-desc">美観地区内の工房で、備前焼の土に触れる。世界にひとつだけの器を自分の手で。焼き上がりは約2ヶ月後にお届け。</p>
-          <div class="tour-card-meta">
-            <span class="tour-card-price">¥3,800〜</span>
-            <span class="tour-card-duration">約90分</span>
-          </div>
+
+        <div class="swiper-slide">
+          <article class="tour-card">
+            <div class="tour-card-img" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80')">
+              <span class="tour-card-tag">ものづくり</span>
+            </div>
+            <div class="tour-card-body">
+              <h3 class="tour-card-title">倉敷帆布 トートバッグ作り</h3>
+              <p class="tour-card-desc">国産帆布の産地・倉敷で、職人と一緒にオリジナルトートバッグを仕立てる。</p>
+              <div class="tour-card-meta">
+                <span class="tour-card-price">¥4,500〜</span>
+                <span class="tour-card-duration">約120分</span>
+              </div>
+              <a href="#contact" class="tour-card-btn">予約する →</a>
+            </div>
+          </article>
         </div>
+
+        <div class="swiper-slide">
+          <article class="tour-card">
+            <div class="tour-card-img" style="background-image:url('https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=600&q=80')">
+              <span class="tour-card-tag">文化体験</span>
+            </div>
+            <div class="tour-card-body">
+              <h3 class="tour-card-title">藍染め ハンカチ染色体験</h3>
+              <p class="tour-card-desc">倉敷の伝統「藍染め」を体験。絞り技法で模様をつけたハンカチを持ち帰れる。</p>
+              <div class="tour-card-meta">
+                <span class="tour-card-price">¥2,500〜</span>
+                <span class="tour-card-duration">約60分</span>
+              </div>
+              <a href="#contact" class="tour-card-btn">予約する →</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="swiper-slide">
+          <article class="tour-card">
+            <div class="tour-card-img" style="background-image:url('https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=600&q=80')">
+              <span class="tour-card-tag">グルメ</span>
+            </div>
+            <div class="tour-card-body">
+              <h3 class="tour-card-title">むらすゞめ 手作り体験</h3>
+              <p class="tour-card-desc">倉敷銘菓を老舗・橘香堂の職人と手作り。焼きたてはここだけの味。</p>
+              <div class="tour-card-meta">
+                <span class="tour-card-price">¥800〜</span>
+                <span class="tour-card-duration">約30分</span>
+              </div>
+              <a href="#contact" class="tour-card-btn">予約する →</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="swiper-slide">
+          <article class="tour-card">
+            <div class="tour-card-img" style="background-image:url('https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?w=600&q=80')">
+              <span class="tour-card-tag">まち歩き</span>
+            </div>
+            <div class="tour-card-body">
+              <h3 class="tour-card-title">美観地区 朝の暮らし散歩</h3>
+              <p class="tour-card-desc">観光客がいない早朝を地元ガイドと歩く。町に住む人の日常に触れる1時間。</p>
+              <div class="tour-card-meta">
+                <span class="tour-card-price">¥1,500〜</span>
+                <span class="tour-card-duration">約60分</span>
+              </div>
+              <a href="#contact" class="tour-card-btn">予約する →</a>
+            </div>
+          </article>
+        </div>
+
       </div>
-
-      <div class="tour-card fade-in">
-        <div class="tour-card-img" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80')">
-          <span class="tour-card-tag">ものづくり</span>
-        </div>
-        <div class="tour-card-body">
-          <h3 class="tour-card-title">倉敷帆布 トートバッグ作り</h3>
-          <p class="tour-card-desc">国産帆布の産地・倉敷で、職人と一緒にオリジナルトートバッグを仕立てる。色・サイズを選んで自分だけの一品に。</p>
-          <div class="tour-card-meta">
-            <span class="tour-card-price">¥4,500〜</span>
-            <span class="tour-card-duration">約120分</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="tour-card fade-in">
-        <div class="tour-card-img" style="background-image:url('https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=600&q=80')">
-          <span class="tour-card-tag">文化体験</span>
-        </div>
-        <div class="tour-card-body">
-          <h3 class="tour-card-title">藍染め ハンカチ染色体験</h3>
-          <p class="tour-card-desc">倉敷の伝統「藍染め」を体験。絞り技法でオリジナルの模様をつけたハンカチを持ち帰れる。初心者でも安心。</p>
-          <div class="tour-card-meta">
-            <span class="tour-card-price">¥2,500〜</span>
-            <span class="tour-card-duration">約60分</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="tour-card fade-in">
-        <div class="tour-card-img" style="background-image:url('https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=600&q=80')">
-          <span class="tour-card-tag">グルメ</span>
-        </div>
-        <div class="tour-card-body">
-          <h3 class="tour-card-title">むらすゞめ 手作り体験</h3>
-          <p class="tour-card-desc">倉敷銘菓「むらすゞめ」を老舗・橘香堂の職人と一緒に手作り。焼きたてのあったかい一個はここだけの味。</p>
-          <div class="tour-card-meta">
-            <span class="tour-card-price">¥800〜</span>
-            <span class="tour-card-duration">約30分</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="tour-card fade-in">
-        <div class="tour-card-img" style="background-image:url('https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?w=600&q=80')">
-          <span class="tour-card-tag">まち歩き</span>
-        </div>
-        <div class="tour-card-body">
-          <h3 class="tour-card-title">美観地区 朝の暮らし散歩</h3>
-          <p class="tour-card-desc">観光客がまだいない早朝の美観地区を、地元ガイドと歩く。川沿いの柳、白壁の朝露、町に住む人の日常に触れる1時間。</p>
-          <div class="tour-card-meta">
-            <span class="tour-card-price">¥1,500〜</span>
-            <span class="tour-card-duration">約60分</span>
-          </div>
-        </div>
-      </div>
-
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
   </div>
 </section>
@@ -138,45 +278,66 @@
 <!-- ===== 出会える人 ===== -->
 <section id="people" class="section people">
   <div class="container">
+    <p class="section-label fade-in">PEOPLE YOU'LL MEET</p>
     <h2 class="section-title fade-in">出会える人</h2>
-    <p class="section-subtitle fade-in">PEOPLE YOU'LL MEET</p>
+    <p class="section-lead fade-in">倉敷の暮らしを支える職人・店主たち。</p>
+
     <div class="people-grid">
+      <a href="#" class="person-card fade-in">
+        <div class="person-img" style="background-image:url('https://images.unsplash.com/photo-1556157382-97eda2d62296?w=400&q=80')"></div>
+        <div class="person-info">
+          <span class="person-role">備前焼作家</span>
+          <h3 class="person-name">山本 拓也</h3>
+          <p class="person-desc">美観地区で工房を構えて15年。「使ってこそ器」をモットーに、日常に馴染む備前焼を作り続けている。</p>
+          <span class="person-link">この人に会う →</span>
+        </div>
+      </a>
 
-      <div class="person-card fade-in">
-        <div class="person-img" style="background-image:url('https://images.unsplash.com/photo-1556157382-97eda2d62296?w=300&q=80')"></div>
-        <h3 class="person-name">山本 拓也</h3>
-        <p class="person-role">備前焼作家</p>
-        <p class="person-desc">美観地区で工房を構えて15年。「使ってこそ器」をモットーに、日常に馴染む備前焼を作り続けている。</p>
+      <a href="#" class="person-card fade-in">
+        <div class="person-img" style="background-image:url('https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80')"></div>
+        <div class="person-info">
+          <span class="person-role">藍染め職人</span>
+          <h3 class="person-name">藤井 美咲</h3>
+          <p class="person-desc">倉敷で100年続く染物屋の4代目。伝統の技法を守りながら、現代に合う藍染めを提案。</p>
+          <span class="person-link">この人に会う →</span>
+        </div>
+      </a>
+
+      <a href="#" class="person-card fade-in">
+        <div class="person-img" style="background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80')"></div>
+        <div class="person-info">
+          <span class="person-role">帆布職人</span>
+          <h3 class="person-name">中村 健一</h3>
+          <p class="person-desc">倉敷帆布の老舗工場で30年。厚手の帆布を一枚ずつ丁寧に織り上げる技術は、国内でも数少ない。</p>
+          <span class="person-link">この人に会う →</span>
+        </div>
+      </a>
+
+      <a href="#" class="person-card fade-in">
+        <div class="person-img" style="background-image:url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&q=80')"></div>
+        <div class="person-info">
+          <span class="person-role">町家カフェオーナー</span>
+          <h3 class="person-name">小林 由紀</h3>
+          <p class="person-desc">築120年の町家を改装したカフェを運営。岡山県産フルーツのパフェと美観地区の景色が楽しめる。</p>
+          <span class="person-link">この人に会う →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 倉敷の魅力（参考サイト風の写真+テキスト） ===== -->
+<section class="section about-kurashiki">
+  <div class="container">
+    <div class="about-grid fade-in">
+      <div class="about-img" style="background-image:url('https://images.unsplash.com/photo-1580998691018-928097b4b7c4?w=800&q=80')"></div>
+      <div class="about-text">
+        <p class="section-label">ABOUT KURASHIKI</p>
+        <h2 class="section-title" style="text-align:left;">白壁と柳の町、倉敷。</h2>
+        <p>江戸時代、幕府の天領として栄えた倉敷。倉敷川沿いに連なる白壁の蔵屋敷と柳並木は、今もそのままの姿で残っている。</p>
+        <p>ここにはただ「見る」だけでは分からない魅力がある。工房に入って職人の手元を見て、自分の手で何かを作ってみると、この町への理解が一段深くなる。</p>
+        <a href="#tours" class="btn btn-primary">体験を探す</a>
       </div>
-
-      <div class="person-card fade-in">
-        <div class="person-img" style="background-image:url('https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&q=80')"></div>
-        <h3 class="person-name">藤井 美咲</h3>
-        <p class="person-role">藍染め職人</p>
-        <p class="person-desc">倉敷で100年続く染物屋の4代目。伝統の技法を守りながら、現代のライフスタイルに合う藍染めを提案している。</p>
-      </div>
-
-      <div class="person-card fade-in">
-        <div class="person-img" style="background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80')"></div>
-        <h3 class="person-name">中村 健一</h3>
-        <p class="person-role">帆布職人</p>
-        <p class="person-desc">倉敷帆布の老舗工場で30年。厚手の帆布を一枚ずつ丁寧に織り上げる技術は、国内でも数少ない。</p>
-      </div>
-
-      <div class="person-card fade-in">
-        <div class="person-img" style="background-image:url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=300&q=80')"></div>
-        <h3 class="person-name">小林 由紀</h3>
-        <p class="person-role">町家カフェオーナー</p>
-        <p class="person-desc">築120年の町家を改装したカフェを運営。岡山県産フルーツのパフェと、美観地区の景色が楽しめる隠れ家。</p>
-      </div>
-
-      <div class="person-card fade-in">
-        <div class="person-img" style="background-image:url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&q=80')"></div>
-        <h3 class="person-name">田中 誠</h3>
-        <p class="person-role">まち歩きガイド</p>
-        <p class="person-desc">倉敷生まれ倉敷育ち。観光マップに載らない路地裏や、地元民だけが知る朝の風景を案内してくれる。</p>
-      </div>
-
     </div>
   </div>
 </section>
@@ -184,59 +345,67 @@
 <!-- ===== モデルコース ===== -->
 <section id="course" class="section course">
   <div class="container">
+    <p class="section-label fade-in">1-DAY MODEL COURSE</p>
     <h2 class="section-title fade-in">モデルコース</h2>
-    <p class="section-subtitle fade-in">1-DAY MODEL COURSE</p>
+    <p class="section-lead fade-in">朝の散歩から夕暮れの川舟まで。倉敷を一日で満喫するプラン。</p>
     <div class="course-timeline fade-in">
-
       <div class="course-item">
-        <p class="course-time">9:00</p>
-        <h3 class="course-item-title">美観地区 朝の散歩</h3>
-        <p class="course-item-desc">人が少ない朝の美観地区を散策。倉敷川沿いの柳並木を歩きながら、白壁の蔵屋敷が朝日に照らされる風景を楽しむ。</p>
+        <div class="course-time-badge">9:00</div>
+        <div class="course-item-content">
+          <h3 class="course-item-title">美観地区 朝の散歩</h3>
+          <p class="course-item-desc">人が少ない朝の美観地区を散策。倉敷川沿いの柳並木を歩きながら、白壁の蔵屋敷が朝日に照らされる風景を楽しむ。</p>
+        </div>
       </div>
-
       <div class="course-item">
-        <p class="course-time">10:30</p>
-        <h3 class="course-item-title">備前焼 手びねり体験</h3>
-        <p class="course-item-desc">工房で備前焼作家・山本さんに教わりながら、自分だけの器を作る。土の感触が心地いい。</p>
+        <div class="course-time-badge">10:30</div>
+        <div class="course-item-content">
+          <h3 class="course-item-title">備前焼 手びねり体験</h3>
+          <p class="course-item-desc">工房で備前焼作家・山本さんに教わりながら、自分だけの器を作る。土の感触が心地いい。</p>
+        </div>
       </div>
-
       <div class="course-item">
-        <p class="course-time">12:30</p>
-        <h3 class="course-item-title">町家カフェでランチ</h3>
-        <p class="course-item-desc">築120年の町家カフェで、岡山県産の食材を使ったランチプレートを。白桃ジュースも忘れずに。</p>
+        <div class="course-time-badge">12:30</div>
+        <div class="course-item-content">
+          <h3 class="course-item-title">町家カフェでランチ</h3>
+          <p class="course-item-desc">築120年の町家カフェで、岡山県産の食材を使ったランチプレートを。白桃ジュースも忘れずに。</p>
+        </div>
       </div>
-
       <div class="course-item">
-        <p class="course-time">14:00</p>
-        <h3 class="course-item-title">大原美術館</h3>
-        <p class="course-item-desc">日本初の私立西洋美術館。エル・グレコ、モネ、ルノワールなど世界の名画を、倉敷の町中で鑑賞する贅沢。</p>
+        <div class="course-time-badge">14:00</div>
+        <div class="course-item-content">
+          <h3 class="course-item-title">大原美術館</h3>
+          <p class="course-item-desc">日本初の私立西洋美術館。エル・グレコ、モネ、ルノワールなど世界の名画を、倉敷の町中で鑑賞する贅沢。</p>
+        </div>
       </div>
-
       <div class="course-item">
-        <p class="course-time">15:30</p>
-        <h3 class="course-item-title">倉敷デニムストリート</h3>
-        <p class="course-item-desc">国産デニム発祥の地・児島の血を引くデニムショップが並ぶストリート。デニムソフトクリームも名物。</p>
+        <div class="course-time-badge">15:30</div>
+        <div class="course-item-content">
+          <h3 class="course-item-title">倉敷デニムストリート</h3>
+          <p class="course-item-desc">国産デニム発祥の地・児島の血を引くデニムショップが並ぶストリート。デニムソフトクリームも名物。</p>
+        </div>
       </div>
-
       <div class="course-item">
-        <p class="course-time">17:00</p>
-        <h3 class="course-item-title">夕暮れの倉敷川</h3>
-        <p class="course-item-desc">夕日に染まる白壁の町並みは、昼とはまた違う表情。川舟に揺られながら一日を振り返る。</p>
+        <div class="course-time-badge">17:00</div>
+        <div class="course-item-content">
+          <h3 class="course-item-title">夕暮れの倉敷川</h3>
+          <p class="course-item-desc">夕日に染まる白壁の町並みは、昼とはまた違う表情。川舟に揺られながら一日を振り返る。</p>
+        </div>
       </div>
-
     </div>
   </div>
 </section>
 
 <!-- ===== 特集 ===== -->
 <section class="section feature">
-  <div class="container">
-    <h2 class="section-title fade-in">特集：倉敷の藍</h2>
-    <p class="section-subtitle fade-in">SPECIAL FEATURE</p>
+  <div class="feature-bg" style="background-image:url('https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=1920&q=80')"></div>
+  <div class="feature-overlay"></div>
+  <div class="container feature-inner">
+    <p class="section-label fade-in" style="color:rgba(255,255,255,0.7);">SPECIAL FEATURE</p>
+    <h2 class="section-title fade-in" style="color:#fff;">特集：倉敷の藍</h2>
     <div class="feature-content fade-in">
       <p>倉敷と藍の関わりは江戸時代にまで遡る。倉敷川を通じて運ばれた藍は、この地の染物文化を育て、白壁の町並みに藍色のアクセントを添えてきた。</p>
-      <p>今も美観地区には藍染めの工房が点在し、伝統的な「絞り染め」から現代的なプロダクトまで、藍の可能性を広げる職人たちがいる。手に取ると分かる、化学染料にはない深みと温もり。使い込むほどに風合いが増す藍染めは、倉敷の暮らしそのものだ。</p>
-      <a href="#" class="btn btn-outline" style="border-color:#fff;color:#fff;">藍染め体験を見る</a>
+      <p>今も美観地区には藍染めの工房が点在し、伝統的な「絞り染め」から現代的なプロダクトまで、藍の可能性を広げる職人たちがいる。</p>
+      <a href="#" class="btn btn-white">藍染め体験を見る</a>
     </div>
   </div>
 </section>
@@ -244,8 +413,8 @@
 <!-- ===== 新着情報 / ブログ ===== -->
 <section id="blog" class="section blog">
   <div class="container">
+    <p class="section-label fade-in">LATEST NEWS</p>
     <h2 class="section-title fade-in">新着情報</h2>
-    <p class="section-subtitle fade-in">LATEST NEWS</p>
     <div class="blog-grid">
 
       <a href="blog/craft-work-village.html" class="blog-card fade-in">
@@ -282,10 +451,9 @@
 <!-- ===== グルメ・宿泊 ===== -->
 <section id="gourmet" class="section gourmet">
   <div class="container">
+    <p class="section-label fade-in">GOURMET & STAY</p>
     <h2 class="section-title fade-in">グルメ・宿泊</h2>
-    <p class="section-subtitle fade-in">GOURMET & STAY</p>
     <div class="gourmet-grid">
-
       <div class="gourmet-card fade-in">
         <div class="gourmet-card-img" style="background-image:url('https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&q=80')"></div>
         <div class="gourmet-card-body">
@@ -294,7 +462,6 @@
           <p class="gourmet-card-desc">岡山といえば白桃。美観地区のカフェで味わう、旬の白桃をたっぷり使った贅沢パフェ。</p>
         </div>
       </div>
-
       <div class="gourmet-card fade-in">
         <div class="gourmet-card-img" style="background-image:url('https://images.unsplash.com/photo-1555126634-323283e090fa?w=400&q=80')"></div>
         <div class="gourmet-card-body">
@@ -303,7 +470,6 @@
           <p class="gourmet-card-desc">「隣からママ（ご飯）を借りるほど美味い」が名前の由来。酢漬けの小魚を握った倉敷の郷土料理。</p>
         </div>
       </div>
-
       <div class="gourmet-card fade-in">
         <div class="gourmet-card-img" style="background-image:url('https://images.unsplash.com/photo-1534040385115-33dcb3acba5b?w=400&q=80')"></div>
         <div class="gourmet-card-body">
@@ -312,7 +478,6 @@
           <p class="gourmet-card-desc">築100年超の町家を改装した空間で、自家焙煎コーヒーと手作りスイーツ。窓から見える白壁が最高のBGM。</p>
         </div>
       </div>
-
       <div class="gourmet-card fade-in">
         <div class="gourmet-card-img" style="background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=80')"></div>
         <div class="gourmet-card-body">
@@ -321,7 +486,32 @@
           <p class="gourmet-card-desc">美観地区の蔵を改装した一棟貸し宿。倉敷の夜の静けさと、朝一番の町並みを独り占めできる。</p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
 
+<!-- ===== FAQ（AIO対策） ===== -->
+<section id="faq" class="section faq">
+  <div class="container">
+    <p class="section-label fade-in">FAQ</p>
+    <h2 class="section-title fade-in">よくある質問</h2>
+    <div class="faq-list fade-in">
+      <details class="faq-item" open>
+        <summary>倉敷美観地区でどんな体験ができますか？</summary>
+        <p>備前焼の手びねり体験、藍染めハンカチ染色体験、倉敷帆布トートバッグ作り、むらすゞめ手作り体験、美観地区の朝散歩ガイドなど、地元の職人と一緒にものづくりを体験できます。すべて事前予約制です。</p>
+      </details>
+      <details class="faq-item">
+        <summary>倉敷へのアクセス方法は？</summary>
+        <p>新幹線で岡山駅まで（東京から約3時間20分、新大阪から約45分）、岡山駅からJR山陽本線で倉敷駅まで約17分。倉敷駅南口から美観地区まで徒歩約10分です。</p>
+      </details>
+      <details class="faq-item">
+        <summary>観光に必要な時間はどのくらい？</summary>
+        <p>美観地区の散策だけなら2〜3時間。体験ツアーや大原美術館を含めると1日コースがおすすめです。朝の散歩から夕暮れの川舟まで、時間帯ごとに違う表情を楽しめます。</p>
+      </details>
+      <details class="faq-item">
+        <summary>倉敷の名物グルメは？</summary>
+        <p>ままかり寿司（酢漬けの小魚の郷土料理）、白桃パフェ（岡山県産白桃を使用）、むらすゞめ（倉敷銘菓）、デニムソフトクリーム（デニムストリート名物）などが人気です。</p>
+      </details>
     </div>
   </div>
 </section>
@@ -329,64 +519,63 @@
 <!-- ===== アクセス ===== -->
 <section id="access" class="section access">
   <div class="container">
+    <p class="section-label fade-in">ACCESS</p>
     <h2 class="section-title fade-in">アクセス</h2>
-    <p class="section-subtitle fade-in">ACCESS</p>
     <div class="access-grid fade-in">
-
       <div class="access-card">
-        <h3>🚄 新幹線で</h3>
+        <h3>新幹線で</h3>
         <div class="access-route">
-          <span>東京駅</span>
-          <span class="arrow">→</span>
-          <span>岡山駅</span>
-          <span class="time">のぞみ 約3時間20分</span>
+          <span class="access-from">東京駅</span>
+          <span class="access-arrow"></span>
+          <span class="access-to">岡山駅</span>
+          <span class="access-time">のぞみ 約3時間20分</span>
         </div>
         <div class="access-route">
-          <span>新大阪駅</span>
-          <span class="arrow">→</span>
-          <span>岡山駅</span>
-          <span class="time">のぞみ 約45分</span>
+          <span class="access-from">新大阪駅</span>
+          <span class="access-arrow"></span>
+          <span class="access-to">岡山駅</span>
+          <span class="access-time">のぞみ 約45分</span>
         </div>
         <div class="access-route">
-          <span>博多駅</span>
-          <span class="arrow">→</span>
-          <span>岡山駅</span>
-          <span class="time">のぞみ 約1時間40分</span>
+          <span class="access-from">博多駅</span>
+          <span class="access-arrow"></span>
+          <span class="access-to">岡山駅</span>
+          <span class="access-time">のぞみ 約1時間40分</span>
         </div>
       </div>
-
       <div class="access-card">
-        <h3>🚃 岡山駅から倉敷駅</h3>
+        <h3>岡山駅から倉敷駅</h3>
         <div class="access-route">
-          <span>岡山駅</span>
-          <span class="arrow">→</span>
-          <span>倉敷駅</span>
-          <span class="time">JR山陽本線 約17分</span>
+          <span class="access-from">岡山駅</span>
+          <span class="access-arrow"></span>
+          <span class="access-to">倉敷駅</span>
+          <span class="access-time">JR山陽本線 約17分</span>
         </div>
-        <p style="font-size:0.85rem;color:var(--muted);margin-top:16px;">倉敷駅南口から美観地区まで徒歩約10分。駅を出てまっすぐ南へ歩くと、白壁の町並みが見えてきます。</p>
+        <p class="access-note">倉敷駅南口から美観地区まで徒歩約10分。駅を出てまっすぐ南へ歩くと、白壁の町並みが見えてきます。</p>
       </div>
-
     </div>
   </div>
 </section>
 
 <!-- ===== Contact ===== -->
-<section id="contact" class="section feature" style="padding:60px 0;">
-  <div class="container" style="text-align:center;">
-    <h2 class="section-title fade-in" style="color:#fff;">お問い合わせ</h2>
-    <p class="section-subtitle fade-in" style="color:rgba(255,255,255,0.7);">CONTACT</p>
-    <p class="fade-in" style="color:rgba(255,255,255,0.85);margin-bottom:28px;font-size:0.95rem;">体験ツアーのご予約・取材のお問い合わせはこちらから</p>
-    <a href="mailto:info@kurashiki-travel.pages.dev" class="btn btn-outline fade-in" style="border-color:#fff;color:#fff;">メールで問い合わせる</a>
+<section id="contact" class="section contact-section">
+  <div class="container">
+    <div class="contact-inner fade-in">
+      <p class="section-label" style="color:rgba(255,255,255,0.6);">CONTACT</p>
+      <h2 class="section-title" style="color:#fff;">お問い合わせ</h2>
+      <p class="contact-desc">体験ツアーのご予約・取材のお問い合わせはこちらから</p>
+      <a href="mailto:info@kurashiki-travel.pages.dev" class="btn btn-white">メールで問い合わせる</a>
+    </div>
   </div>
 </section>
 
 <!-- ===== Footer ===== -->
-<footer class="footer">
+<footer class="footer" role="contentinfo">
   <div class="container">
     <div class="footer-grid">
       <div>
         <p class="footer-brand">倉敷<span>トラベル</span></p>
-        <p class="footer-desc">倉敷美観地区を中心に、地元の人と出会い、体験し、暮らしに触れる旅を提案します。白壁の町で待っています。</p>
+        <p class="footer-desc">倉敷美観地区を中心に、地元の人と出会い、体験し、暮らしに触れる旅を提案します。</p>
       </div>
       <div>
         <h4>コンテンツ</h4>
@@ -402,6 +591,7 @@
         <ul>
           <li><a href="#gourmet">グルメ・宿泊</a></li>
           <li><a href="#access">アクセス</a></li>
+          <li><a href="#faq">よくある質問</a></li>
           <li><a href="#contact">お問い合わせ</a></li>
         </ul>
       </div>
@@ -412,6 +602,7 @@
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
